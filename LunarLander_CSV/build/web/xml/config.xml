@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuraciones>
+    <configuracion nombre="RedEasy">
+        <nave>Rojo</nave>
+        <modoDificil>false</modoDificil>
+    </configuracion>
+    <configuracion nombre="RedHard">
+        <nave>Rojo</nave>
+        <modoDificil>true</modoDificil>
+    </configuracion>
+    <configuracion nombre="WhiteEasy">
+        <nave>Blanco</nave>
+        <modoDificil>false</modoDificil>
+    </configuracion>
+    <configuracion nombre="WhiteHard">
+        <nave>Blanco</nave>
+        <modoDificil>true</modoDificil>
+    </configuracion>
+    <configuracion nombre="PurpleEasy">
+        <nave>Lila</nave>
+        <modoDificil>false</modoDificil>
+    </configuracion>
+    <configuracion nombre="PurpleHard">
+        <nave>Lila</nave>
+        <modoDificil>true</modoDificil>
+    </configuracion>
+</configuraciones>

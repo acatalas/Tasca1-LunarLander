@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        <title>Lunar Lander</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Lunar Lander Project - Javascript Definitive Version">
+        <meta name="author" content="Javier Vañó">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' media='screen and (min-width: 720px)' href='css/desktopCSS.css'>
+        <link rel='stylesheet' media='screen and (max-width: 720px)' href='css/mobileCSS.css'>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="js/js.js"></script>
+    </head>
+    <body>
+        <h2 id="dificultad">&nbsp;</h2>
+        <div id="divCentral">
+            <img id="nave" src="img/blanco.png" alt="imagen nave">
+        </div>
+        <div id="indicadores">
+            <div id="velocidad">
+                <img id="velD" src="img/indicadorVelocidadPcFacil.png" alt="imagen velocimetro">
+                <img id="velM" src="img/velocidadVerde.png" alt="imagen velocimetro">
+                <div id="aguja">
+                    <img id="imgAguja" src="img/agujaVelocidadPc.png" alt="imagen aguja">
+                </div>
+            </div>
+            <div id="fuel">
+                <img id="fuelD" src="img/indicadorFuelPc.png" alt="imagen fuel">
+                <img id="fuelM" src="img/indicadorFuelMovil.png" alt="imagen fuel">
+                <div id="fondoFuel">&nbsp;</div>
+            </div>
+            <div id="altura">
+                <img src="img/indicadorAlturaPc.png" alt="imagen altura">
+                <div id="fondoAltura">&nbsp;</div>
+            </div>
+        </div>
+        <div id="menu">
+            <button type="button" id="btAbout">About</button>
+            <button type="button" id="btInstrucciones">Instrucciones</button>
+            <button type="button" class="small_button" id="btFacil">Fácil</button>
+            <button type="button" class="small_button" id="btDificil">Difícil</button>
+        </div>
+        <div id="instrucciones" class="popup">
+            <h1>Instrucciones</h1>
+            <p>Tu misión es aterrizar en la luna a una velocidad lo suficiente baja para no estrellarte. 
+                Dicha velocidad dependerá de la dificultad seleccionada. Si estás jugando desde el ordenador, deberás mantener la 
+                velocidad menor al indicador naranja del velocímetro. Si, en cambio, estás jugando desde el móvil, podrás aterrizar 
+                mientras el indicador de velocidad marque verde o amarillo, si juegas en fácil y solo podrás aterrizar de forma 
+                segura cuando el indicador marque verde, si juegas en difícil.</p>
+            <p>Tienes a tu disposición los motores de la nave, que podrás activar manteniendo pulsada la 
+                luna, tanto en el ordenador como en el móvil. Esto frenará la nave, reduciendo su velocidad. Mientras los motores 
+                estén activos, irás gastando combustible, de modo que no podrás seguir usándolos si éste se acaba. En el modo 
+                difícil solo dispones de medio tanque de combustible.</p>
+            <p>¡Buena suerte en la misión!</p>
+            <button type="button" id="btCancelInstrucciones">Volver atrás</button>
+        </div>
+        <div id="about" class="popup">
+            <h1>About</h1>
+            <p>El presente minijuego "Lunar Lander" ha sido creado por un servidor, Javier Vañó, 
+                para la asignatura de Lenguaje de Marcas del primer curso del ciclo formativo superior 
+                en desarrollo de aplicaciones multiplataforma. El minijuego nos presenta una situación 
+                en la que tenemos que aterrizar una nave en la superficie lunar. Utilizando HTML, CSS y 
+                Javascript, se consigue reproducir dicho escenario, así como programar todo el sistema de 
+                menús y botones con los que el usuario interactua.</p>
+            <button type="button" id="btCancelAbout">Volver atrás</button>
+        </div>
+        <div id="resPositivo">
+            <h1>¡Enhorabuena!</h1>
+            <p id="textResPositivo">Has estado a la altura de esta peligrosa maniobra y has conseguido aterrizar la nave a xxx px/s.</p>
+            <br/>
+            <p>¡Nos vemos en la próxima misión!</p>
+            <br/>
+            <button type="button" id="btResPositivo">Reiniciar</button>
+        </div>
+        <div id="resNegativo">
+            <h1>Vaya...</h1>
+            <p id="textResNegativo">La misión ha sido un fracaso ya que has "aterrizado" la nave a xxx px/s y se ha estrellado.</p>
+            <br/>
+            <p>¡Sigue practicando!</p>
+            <br/>
+            <button type="button" id="btResNegativo">Reiniciar</button>
+        </div>
+        <div id="botones">
+            <img id="btMenu" src="img/botonMenuPlay.png" alt="boton play/pause">
+            <img id="btRestart" src="img/botonRestart.png" alt="boton restart">
+        </div>
+        <div id="luna">
+            <img src="img/luna.png" alt="imagen luna">
+        </div>
+    </body>
+</html>

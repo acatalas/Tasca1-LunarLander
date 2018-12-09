@@ -1,0 +1,32 @@
+{"configuraciones" : [
+    {
+        "nombre": "RF",
+        "nave": "rojo",
+        "modoDificil": false 
+    },
+    {
+        "nombre": "RD",
+        "nave": "rojo",
+        "modoDificil": true 
+    },
+    {
+        "nombre": "BF",
+        "nave": "blanco",
+        "modoDificil": false 
+    },
+    {
+        "nombre": "BD",
+        "nave": "blanco",
+        "modoDificil": true 
+    },
+    {
+        "nombre": "LF",
+        "nave": "lila",
+        "modoDificil": false 
+    },
+    {
+        "nombre": "LD",
+        "nave": "lila",
+        "modoDificil": true 
+    }
+]}

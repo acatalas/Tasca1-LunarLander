@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configuraciones xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='file:///C:/Users/Ale/Documents/NetBeansProjects/JAXBReader/config.xsd'>
+    <configuracion nombre='RD'>
+        <nave>Rojo</nave>
+        <modoDificil>true</modoDificil>
+    </configuracion>
+    <configuracion nombre='BD'>
+        <nave>Blanco</nave>
+        <modoDificil>true</modoDificil>
+    </configuracion>
+    <configuracion nombre='RF'>
+        <nave>Rojo</nave>
+        <modoDificil>false</modoDificil>
+    </configuracion>
+    <configuracion nombre='BF'>
+        <nave>Blanco</nave>
+        <modoDificil>false</modoDificil>
+    </configuracion>
+    <configuracion nombre='LF'>
+        <nave>Lila</nave>
+        <modoDificil>false</modoDificil>
+    </configuracion>
+    <configuracion nombre='LD'>
+        <nave>Lila</nave>
+        <modoDificil>true</modoDificil>
+    </configuracion>
+</configuraciones>
