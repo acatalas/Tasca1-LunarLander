@@ -85,9 +85,6 @@ window.onload = function () {
     indicadorVelocidadM = document.getElementById("velM");
     indicadorFuel = document.getElementById("fondoFuel");
 
-    //Escoge la nave
-    document.getElementById("nave").src = "img/" + colorNave + ".png";
-
     //Boton nave
     document.getElementById("nave").onclick = function () {
         let color = prompt("Elige el color de la nave", "Rojo");
@@ -228,22 +225,7 @@ window.onload = function () {
     document.getElementById("luna").addEventListener("touchend", function (e) {
         motorOff();
     });
-
-    if (modoDificil) {
-        document.getElementById("btDificil").style.backgroundColor = naranja;
-        document.getElementById("btDificil").style.color = "white";
-        document.getElementById("velD").src = "img/indicadorVelocidadPcDificil.png";
-        valorFuel = 50;
-    } else {
-        document.getElementById("btFacil").style.backgroundColor = naranja;
-        document.getElementById("btFacil").style.color = "white";
-        document.getElementById("velD").src = "img/indicadorVelocidadPcFacil.png";
-        valorFuel = 100;
-    }
-
-    medidaFuel = valorFuel + "%";
-    indicadorFuel.style.height = medidaFuel;
-    indicadorFuel.style.width = medidaFuel;
+    
     createSaveConfigScreen();
 };
 

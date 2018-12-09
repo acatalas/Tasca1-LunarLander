@@ -39,10 +39,10 @@ var medidaFuel = valorFuel + "%";
 var naranja = "rgb(225, 75, 0)";
 var azul = "rgb(0, 167, 208)";
 
-leerConfigJSON();
-
 // Eventos
 window.onload = function () {
+    
+    leerConfigJSON();
     
     //Atajos botones del menu
     btMenu = document.getElementById("btMenu");
@@ -75,28 +75,7 @@ window.onload = function () {
     indicadorVelocidadD = document.getElementById("imgAguja");
     indicadorVelocidadM = document.getElementById("velM");
     indicadorFuel = document.getElementById("fondoFuel");
-
-    //Escoge la nave
-    document.getElementById("nave").src = "img/" + colorNave + ".png";
-
-    //Comprobacion de el modo dificil
-    if (modoDificil) {
-        btDificil.style.backgroundColor = naranja;
-        btDificil.style.color = "white";
-        document.getElementById("velD").src = "img/indicadorVelocidadPcDificil.png";
-        valorFuel = 50;
-    } else {
-        btFacil.style.backgroundColor = naranja;
-        btFacil.style.color = "white";
-        document.getElementById("velD").src = "img/indicadorVelocidadPcFacil.png";
-        valorFuel = 100;
-    }
-    
-    //Actualiza el indicador del fuel
-    medidaFuel = valorFuel + "%";
-    indicadorFuel.style.height = medidaFuel;
-    indicadorFuel.style.width = medidaFuel;
-
+   
     //Boton nave
     document.getElementById("nave").onclick = function () {
         let color = prompt("Elige el color de la nave", "Rojo");
@@ -254,6 +233,8 @@ function leerConfigJSON() {
         success: function (jsn) {
             modoDificil = jsn.modoDificil;
             colorNave = jsn.nave;
+            actualizarDificultad();
+            actualizarNave();
         },
         error: function (e) {
             if (e["responseJSON"] === undefined)
@@ -361,6 +342,38 @@ function actualizarFuel() {
     indicadorFuel.style.height = medidaFuel;
     indicadorFuel.style.width = medidaFuel;
 }
+//Actualiza la dificultad en la pantalla de juego
+function actualizarDificultad(){
+     //Comprobacion de el modo dificil
+    if (modoDificil) {
+        valorFuel = 50;
+        limiteVelocidad = 5;
+        document.getElementById("btDificil").style.backgroundColor = naranja;
+        document.getElementById("btDificil").style.color = "white";
+        document.getElementById("btFacil").style.backgroundColor = azul;
+        document.getElementById("btFacil").style.color = "black";
+        document.getElementById("velD").src = "img/indicadorVelocidadPcDificil.png";
+    } else {
+        valorFuel = 100;
+        limiteVelocidad = 10;
+        document.getElementById("btFacil").style.backgroundColor = naranja;
+        document.getElementById("btFacil").style.color = "white";
+        document.getElementById("btDificil").style.backgroundColor = azul;
+        document.getElementById("btDificil").style.color = "black";
+        document.getElementById("velD").src = "img/indicadorVelocidadPcFacil.png";
+    }
+
+    //Actualiza el indicador del fuel
+    medidaFuel = valorFuel + "%";
+    indicadorFuel.style.height = medidaFuel;
+    indicadorFuel.style.width = medidaFuel;
+}
+
+//Actualiza el color de la nave en la pantalla de juego
+function actualizarNave(){
+    //Escoge la nave
+    document.getElementById("nave").src = "img/" + colorNave + ".png";
+}
 
 function restart() {
     clearInterval(temporizador);
@@ -398,5 +411,7 @@ function restart() {
     // Empezamos de nuevo
     start();
 }
+
+
 
 

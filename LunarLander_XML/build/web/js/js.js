@@ -85,12 +85,9 @@ window.onload = function () {
     indicadorVelocidadM = document.getElementById("velM");
     indicadorFuel = document.getElementById("fondoFuel");
 
-    //Escoge la nave
-    document.getElementById("nave").src = "img/" + colorNave + ".png";
-
     //Boton nave
     document.getElementById("nave").onclick = function () {
-        let color = prompt("Elige el color de la nave", "Rojo");
+        let color = prompt("Elige el color de la nave", "Blanco");
         if (color !== null) {
             if (checkColor(color) === true){
                 document.getElementById("nave").src = "img/" + color.toLowerCase() + ".png";
@@ -229,21 +226,6 @@ window.onload = function () {
         motorOff();
     });
 
-    if (modoDificil) {
-        document.getElementById("btDificil").style.backgroundColor = naranja;
-        document.getElementById("btDificil").style.color = "white";
-        document.getElementById("velD").src = "img/indicadorVelocidadPcDificil.png";
-        valorFuel = 50;
-    } else {
-        document.getElementById("btFacil").style.backgroundColor = naranja;
-        document.getElementById("btFacil").style.color = "white";
-        document.getElementById("velD").src = "img/indicadorVelocidadPcFacil.png";
-        valorFuel = 100;
-    }
-
-    medidaFuel = valorFuel + "%";
-    indicadorFuel.style.height = medidaFuel;
-    indicadorFuel.style.width = medidaFuel;
     createSaveConfigScreen();
 };
 
